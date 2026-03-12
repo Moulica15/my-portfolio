@@ -25,6 +25,28 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
+      /* New Design Accents */
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .modal.active {
+        display: flex;
+        opacity: 1;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+        border-color: #60a5fa;
+      }
     </style>
   </head>
   <body class="bg-[#020617] text-slate-300">
@@ -42,11 +64,13 @@
           <a href="#projects" class="hover:text-white transition">Projects</a>
           <a href="#education" class="hover:text-white transition">Education</a>
         </div>
-        <a
-          href="mailto:moulicachowdary@gmail.com"
-          class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl text-sm transition"
-          >Contact Me</a
+        <!-- Updated Contact Me Button -->
+        <button
+          onclick="toggleModal()"
+          class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl text-sm font-bold transition"
         >
+          Contact Me
+        </button>
       </div>
     </nav>
 
@@ -74,6 +98,40 @@
             class="px-4 py-2 glass rounded-full text-xs font-mono text-emerald-400"
             >#AI</span
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Added for visual impact) -->
+    <section id="projects" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-12">Core Projects</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-8 glass rounded-3xl project-card transition-all">
+            <i class="fa-solid fa-link-slash text-blue-500 text-2xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">PhishBlock</h3>
+            <p class="text-sm text-slate-400">
+              Algorithmic detection of malicious phishing links.
+            </p>
+          </div>
+          <div class="p-8 glass rounded-3xl project-card transition-all">
+            <i
+              class="fa-solid fa-check-to-slot text-purple-500 text-2xl mb-4"
+            ></i>
+            <h3 class="text-xl font-bold text-white mb-2">Voting System</h3>
+            <p class="text-sm text-slate-400">
+              Blockchain-based student voting for campus security.
+            </p>
+          </div>
+          <div class="p-8 glass rounded-3xl project-card transition-all">
+            <i
+              class="fa-solid fa-user-secret text-emerald-500 text-2xl mb-4"
+            ></i>
+            <h3 class="text-xl font-bold text-white mb-2">Forensics</h3>
+            <p class="text-sm text-slate-400">
+              Ransomware detection using memory forensics.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -166,7 +224,6 @@
           Education & Achievements
         </h2>
         <div class="grid md:grid-cols-2 gap-12">
-          <!-- Academic -->
           <div>
             <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
               <i class="fa-solid fa-graduation-cap text-blue-500"></i> Academic
@@ -191,7 +248,6 @@
               </div>
             </div>
           </div>
-          <!-- Certifications -->
           <div>
             <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
               <i class="fa-solid fa-certificate text-purple-500"></i>
@@ -204,15 +260,15 @@
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-check text-emerald-500"></i> Tata
-                Cybersecurity Analyst (Forage)
+                Cybersecurity Analyst
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-check text-emerald-500"></i> HackerRank:
-                Bronze Stars in C, Java, SQL
+                C, Java, SQL Bronze
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-check text-emerald-500"></i> JPMorgan
-                Generationtech Challenge 2024
+                Generationtech Challenge
               </li>
             </ul>
           </div>
@@ -236,5 +292,98 @@
       </div>
       <p class="text-slate-500 text-xs">Moulica Chowdary | Bengaluru, KA</p>
     </footer>
+
+    <!-- CONTACT MODAL (POP-UP) -->
+    <div id="contactModal" class="modal">
+      <div
+        class="bg-[#0f172a] border border-white/10 p-10 rounded-3xl max-w-md w-full mx-6 relative shadow-2xl"
+      >
+        <button
+          onclick="toggleModal()"
+          class="absolute top-6 right-6 text-slate-500 hover:text-white transition"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <h2 class="text-2xl font-bold text-white mb-8 gradient-text">
+          Contact Details
+        </h2>
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                Phone
+              </p>
+              <p class="text-white font-bold">+91 90192 70326</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-600/20 flex items-center justify-center text-purple-400"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                Email
+              </p>
+              <p class="text-white font-bold">moulicachowdary@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-emerald-600/20 flex items-center justify-center text-emerald-400"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                LinkedIn
+              </p>
+              <a
+                href="https://linkedin.com/in/moulicachowdary"
+                target="_blank"
+                class="text-blue-400 hover:underline"
+                >moulicachowdary</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-yellow-600/20 flex items-center justify-center text-yellow-400"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                Address
+              </p>
+              <p class="text-sm text-slate-300">
+                #482, Siddeswara Nilaya, Bangalore - 62
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleModal() {
+        const modal = document.getElementById("contactModal");
+        modal.classList.toggle("active");
+        document.body.style.overflow = modal.classList.contains("active")
+          ? "hidden"
+          : "auto";
+      }
+      // Close modal on outside click
+      window.onclick = function (event) {
+        const modal = document.getElementById("contactModal");
+        if (event.target == modal) toggleModal();
+      };
+    </script>
   </body>
 </html>
