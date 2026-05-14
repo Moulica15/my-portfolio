@@ -18,5 +18,5 @@ Bangalore, Karnataka, India
 
 ## Portfolio Links
 
-- Developer Portfolio: https://yourportfolio.com
+- Developer Portfolio: https://moulica15.github.io/my-portfolio/
 - GitHub: https://github.com/Moulica15
