@@ -22,7 +22,7 @@ This portfolio showcases:
 
 ## Portfolio Sections
 
-- [Home](index.md)
+- [Home](index-text.md)
 - [About Me](about.md)
 - [Projects](projects.md)
 - [Certifications](certifications.md)
