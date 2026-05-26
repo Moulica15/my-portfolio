@@ -44,7 +44,7 @@ This portfolio showcases:
 
 You can also view my complete developer portfolio here:
 
-[My Portfolio Website][(https://moulica.netlify.app/)]
+[My Portfolio Website](https://moulica.netlify.app/)
 
 
 
