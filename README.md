@@ -18,7 +18,7 @@ This portfolio showcases:
 - Workshop learnings
 - Developer blogs
   
----
+
 
 ## Portfolio Sections
 
@@ -29,7 +29,7 @@ This portfolio showcases:
 - [Workshops](workshops.md)
 - [Contact](contact.md)
 
----
+
 
 ## Technical Documentation
 
@@ -38,7 +38,7 @@ This portfolio showcases:
 - [Flask Beginner Guide](docs/flask-guide.md)
 - [Cybersecurity Notes](docs/cybersecurity-notes.md)
 
----
+
 
 ## Existing Portfolio Website
 
@@ -47,7 +47,7 @@ You can also view my complete developer portfolio here:
 [My Portfolio Website][(https://moulica.netlify.app/)]
 
 
----
+
 
 ## Connect With Me
 
